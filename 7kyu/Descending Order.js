@@ -15,6 +15,9 @@
 
 
 function descendingOrder(number){
+	if (number < 0) {
+		return;
+	}
   // Make our number argumen a string
 	number = '' + number;
 	// We split each digits into an array
@@ -23,7 +26,6 @@ function descendingOrder(number){
 	number.sort(compare);
 	// Now our array is sorted we converts it into a number
 	let result = parseInt(number.join(''));
-	console.log(parseInt(number.join('')), 'test');
 	return result;
 }
 
