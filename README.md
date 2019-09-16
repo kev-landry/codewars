@@ -15,4 +15,4 @@ assert.equal(descendingOrder(21445), 54421);
 node descendingOrder.js
 ```
 
-You can find my codewars profile here : <https://www.codewars.com/users/kev_dta>
+You can find my codewars profile here : <https://www.codewars.com/users/kev-landry>
