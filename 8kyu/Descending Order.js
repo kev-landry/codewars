@@ -21,11 +21,8 @@ descendingOrder(58793);
 
 var assert = require('assert');  
 
-// Test.assertEquals(descendingOrder(0), 0)
 
-assert.equal(descendingOrder(54421), 54421);
+assert.equal(descendingOrder(21445), 54421);
 assert.equal(descendingOrder(145263), 654321);
 assert.equal(descendingOrder(1254859723), 9875543221);
-// Test.assertEquals(descendingOrder(0), 0)
-// Test.assertEquals(descendingOrder(1), 1)
-// Test.assertEquals(descendingOrder(123456789), 987654321)
+
