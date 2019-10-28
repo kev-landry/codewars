@@ -11,39 +11,42 @@
 //  persistence(4) === 0 // because 4 is already a one-digit number
 
 function persistence(numbers) {
-	let count = 0;
-	// recurviveMultiple(numbers, count);
+	let digits = numbers.toString().split('').map(Number);
+	let count = 1;
+	// recurviveMultiple()
 
-	// We return the count of multi persistence
-	return recurviveMultiple.call(this, numbers, count);
+	return 'hello';
 }
 
-function recurviveMultiple(numbers, count) {
-	// We convert our number into an array of digits
+function recurviveMultiple(numbers) {
 	numbers = numbers.toString().split('').map(Number);
-	// Init result
+	let count = 0;
 	let result = 1;
-	// If only one digit we end our function
-	if (numbers.length === 1) {
-		return count;
+	while (numbers > 9) {
+		if (numbers.length === 1) {
+			console.log("COUNTER ATTEINT", count);
+			return 'hello';
+		}
+		for (let index = 0; index < numbers.length; index++) {
+			const element = numbers[index];
+			// console.log('el ->', element);
+			result *= element;
+			// console.log('result', result);
+		}
+		count ++;
 	}
-	for (let index = 0; index < numbers.length; index++) {
-		const element = numbers[index];
-		// On multiplie chaque chiffre par le suivant
-		result *= element;
-	}
-	count ++;
-	return recurviveMultiple(result, count);
+	// recurviveMultiple(result, count);
+	// recurviveMultiple(result)
+	return count;
 }
-
-persistence(999);
+recurviveMultiple(4);
 
 const assert = require('assert');
 
-assert.equal(persistence(999),4);
-assert.equal(persistence(39),3);
-assert.equal(persistence(4),0);
-assert.equal(persistence(25),2);
+// assert.equal(persistence(999),4);
+// assert.equal(persistence(39),3);
+// assert.equal(persistence(4),0);
+// assert.equal(persistence(25),2);
 
 // [9,8,7]
 //  0 1 2
